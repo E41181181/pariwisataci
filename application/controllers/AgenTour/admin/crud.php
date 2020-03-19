@@ -12,10 +12,11 @@ class Crud extends CI_Controller{
 		$data['konten'] = $this->m_data->tampil_data()->result();
 		$this->load->view('v_tampil',$data);
     }
-    function list(){
-      $data['konten'] = $this->m_data->tampil_data()->result();
-      $this->load->view('list',$data);
-      }
+  function list(){
+    $data['konten'] = $this->m_data->tampil_data()->result();
+    $this->load->view('list',$data);
+   
+  }
 
     function tambah(){
 		$this->load->view('v_input'); 

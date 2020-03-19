@@ -103,33 +103,6 @@
     </div>
 </section>
 
-<section class="mbr-section mbr-section--relative" id="msg-box4-3" data-rv-view="11" style="background-color: rgb(40, 33, 33);">
-    
-    <div class="mbr-section__container mbr-section__container--isolated container" style="padding-top: 93px; padding-bottom: 93px;">
-        <div class="row">
-            <div class="mbr-box mbr-box--fixed mbr-box--adapted">
-                <div class="mbr-box__magnet mbr-box__magnet--top-right mbr-section__left col-sm-6 image-size" style="width: 50%;">
-                    <figure class="mbr-figure mbr-figure--adapted mbr-figure--caption-inside-bottom mbr-figure--full-width"><img src="assets/images/iphone.png" class="mbr-figure__img"></figure>
-                </div>
-                <div class="mbr-box__magnet mbr-class-mbr-box__magnet--center-left col-sm-6 content-size mbr-section__right">
-                    <div class="mbr-section__container mbr-section__container--middle">
-                        <div class="mbr-header mbr-header--auto-align mbr-header--wysiwyg">
-                            <h3 class="mbr-header__text">Keterangan Tentang Instansi</h3>
-                            
-                        </div>
-                    </div>
-                    <div class="mbr-section__container mbr-section__container--middle">
-                        <div class="mbr-article mbr-article--auto-align mbr-article--wysiwyg">Deskripsi</div>
-                    </div>
-                    <div class="mbr-section__container">
-                        <div class="mbr-buttons mbr-buttons--auto-align btn-inverse"><a class="mbr-buttons__btn btn btn-lg btn-default" href="https://mobirise.com">LEARN MORE</a></div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</section>
 
 <section class="mbr-section mbr-section--relative mbr-section--short-paddings" id="msg-box1-7" data-rv-view="14" style="background-color: rgb(40, 33, 33);">
 
@@ -157,56 +130,34 @@
 
 <section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="pricing-table1-4" data-rv-view="17" style="background-color: rgb(40, 33, 33);">
     
-    <div class="mbr-section__container mbr-section__container--std-top-padding container" style="padding-top: 31px; margin-bottom: -62px;">
+    <div class="mbr-section__container mbr-section__container--std-top-padding container" style="padding-top: 31px; margin-bottom:92px;">
         <div class="row">
-            <div class="mbr-plan col-xs-12 mbr-plan--first col-lg-3 col-sm-4 col-lg-offset-1-5 col-sm-0">
+        <?php 
+		$no = 1;
+		foreach($konten as $u){ 
+		?>
+            <div class="col-md-4">
                 <div class="mbr-plan__box">
+
                     <div class="mbr-plan__header">
                         <div class="mbr-header mbr-header--reduce mbr-header--center mbr-header--wysiwyg">
-                            <h3 class="mbr-header__text">Paket Korea</h3>
+                            <h3 class="mbr-header__text"><?php echo $u->judul ?></h3>
                         </div>
                     </div>
                     <div class="mbr-plan__number">
                         <div class="mbr-number mbr-number--price">
                             <div class="mbr-number__num">
                                 <div class="mbr-number__group">
-                                    <sup class="mbr-number__left">$</sup><span class="mbr-number__value">25K</span>
+                                    <sup class="mbr-number__left">$</sup><span class="mbr-number__value"><?php echo $u->harga ?></span>
                                 </div>
                             </div>
-                            <div class="mbr-number__caption">3Days 2Night</div>
+                            <div class="mbr-number__caption"><?php echo $u->judul ?></div>
                         </div>
                     </div>
                     <div class="mbr-plan__details"><ul>
-                        <li><strong>Hotel</strong> Storage</li>
-                        <li><strong>Content</strong> --</li>
-                        <li><strong>Content</strong> --</li>
-                    </ul></div>
-                    <div class="mbr-plan__buttons">
-                        <div class="mbr-buttons mbr-buttons--center"><a href="https://mobirise.com" class="mbr-buttons__btn btn btn-wrap btn-xs-lg btn-default">Ayo Liburan</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="mbr-plan col-xs-12 mbr-plan--success col-lg-3 col-sm-4">
-                <div class="mbr-plan__box">
-                    <div class="mbr-plan__header">
-                        <div class="mbr-header mbr-header--reduce mbr-header--center mbr-header--wysiwyg">
-                            <h3 class="mbr-header__text">Paket Jepang</h3>
-                        </div>
-                    </div>
-                    <div class="mbr-plan__number">
-                        <div class="mbr-number mbr-number--price">
-                            <div class="mbr-number__num">
-                                <div class="mbr-number__group">
-                                    <sup class="mbr-number__left">$</sup><span class="mbr-number__value">728</span>
-                                </div>
-                            </div>
-                            <div class="mbr-number__caption">3Days 2Night</div>
-                        </div>
-                    </div>
-                    <div class="mbr-plan__details"><ul>
-                        <li><strong>Hotel</strong> Storage</li>
-                        <li><strong>Content</strong> --</li>
-                        <li><strong>Content</strong> --h</li>
+                        <li><?php echo $u->fasilitas ?></li>
+                        
+                        
                     </ul></div>
                     <div class="mbr-plan__buttons">
                         <div class="mbr-buttons mbr-buttons--center"><a href="https://mobirise.com" class="mbr-buttons__btn btn btn-wrap btn-xs-lg btn-default">Ayo Liburan</a></div>
@@ -214,34 +165,9 @@
                 </div>
             </div>
             
-            <div class="mbr-plan col-xs-12 mbr-plan--warning mbr-plan--last col-lg-3 col-sm-4">
-                <div class="mbr-plan__box">
-                    <div class="mbr-plan__header">
-                        <div class="mbr-header mbr-header--reduce mbr-header--center mbr-header--wysiwyg">
-                            <h3 class="mbr-header__text">Paket China</h3>
-                        </div>
-                    </div>
-                    <div class="mbr-plan__number">
-                        <div class="mbr-number mbr-number--price">
-                            <div class="mbr-number__num">
-                                <div class="mbr-number__group">
-                                    <sup class="mbr-number__left">$</sup><span class="mbr-number__value">611</span>
-                                </div>
-                            </div>
-                            <div class="mbr-number__caption">3Days 2Night</div>
-                        </div>
-                    </div>
-                    <div class="mbr-plan__details"><ul>
-                        <li><strong>Hotel </strong> Silka Tsuen Wan, Hong Kong</li>
-                        <li><strong>Unlimited</strong> Users</li>
-                        <li><strong>1 TB</strong> Bandwidth</li>
-                    </ul>
-                </div>
-                    <div class="mbr-plan__buttons">
-                        <div class="mbr-buttons mbr-buttons--center"><a href="https://mobirise.com" class="mbr-buttons__btn btn btn-wrap btn-xs-lg btn-default">Ayo Liburan</a></div>
-                    </div>
-                </div>
-            </div>
+            
+            <?php } ?>
+            
             
         </div>
     </div>
@@ -253,7 +179,7 @@
         <div class="mbr-contacts mbr-contacts--wysiwyg row" style="padding-top: 45px; padding-bottom: 45px;">
             <div class="col-sm-6">
                 <figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--no-bg">
-                    <div class="mbr-figure__map mbr-figure__map--short" data-state="error"><div data-state-details="">Request denied</div></div>
+                    <div class="mbr-figure__map mbr-figure__map--short" data-state="error"><div data-state-details="https://goo.gl/maps/iDgdZQHHAtRk1P356"></div></div>
                 </figure>
             </div>
             <div class="col-sm-6">
