@@ -12,7 +12,11 @@ class Crud extends CI_Controller{
 		$data['konten'] = $this->m_data->tampil_data()->result();
 		$this->load->view('v_tampil',$data);
     }
-    
+    function list(){
+      $data['konten'] = $this->m_data->tampil_data()->result();
+      $this->load->view('list',$data);
+      }
+
     function tambah(){
 		$this->load->view('v_input'); 
     }
@@ -44,7 +48,7 @@ class Crud extends CI_Controller{
     function hapus($id){
 		$where = array('id' => $id);
 		$this->m_data->hapus_data($where,'konten');
-		redirect('crud/index');
+		redirect('AgenTour/admin/crud/admin');
     }
     //fungsi hapus menghapus data pada table dengan parameter id
 
@@ -53,6 +57,12 @@ class Crud extends CI_Controller{
 		$data['konten'] = $this->m_data->edit_data($where,'konten')->result();
 		$this->load->view('v_edit',$data);
     }
+
+    function editkntn($id){
+      $where = array('id' => $id);
+      $data['konten'] = $this->m_data->edit_data($where,'konten')->result();
+      $this->load->view('formedit',$data);
+      }
     //sama seperti hapus data, pada fungsi edit ini id dipilih sebagai parameter kemudian data yang ada di id itu ditampilkan melalui model
     //kemudian data tersebut disimpan kembali dengan id yang sama.
 
@@ -73,7 +83,7 @@ class Crud extends CI_Controller{
         );
     
         $this->m_data->update_data($where,$data,'konten');
-        redirect('crud/index');
+        redirect('AgenTour/admin/crud/admin');
     }
     //sama seperti hapus data, pada fungsi edit ini id dipilih sebagai parameter kemudian data yang ada di id itu ditampilkan pada array
     // melalui model
