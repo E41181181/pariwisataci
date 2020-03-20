@@ -1,4 +1,17 @@
-# ci-restserver
-Check the recent version at https://github.com/chriskacerguis/codeigniter-restserver
+# SI Sederhana Pariwisata(Agen Tour) Menggunakan CI3 BOOSTRAP DAN REST API
 
-My alternate version https://github.com/ardisaurus/old-rest-ci
+
+
+## Installation
+
+Ekstrak atau Clone dari Repositori pada localhost anda.
+import .sql ke database.
+
+```bash
+Untuk Mengakses halaman pengunjung 
+http://localhost/pariwisataCi/AgenTour/
+
+Untuk Mengakses halaman Admin
+http://localhost/pariwisataCi/AgenTour/admin/crud/admin
+```
+
